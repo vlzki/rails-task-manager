@@ -1,0 +1,8 @@
+<h1>Voici toutes les taches à réaliser</h1>
+
+<% @tasks.each do |task| %>
+  <h2> <%= task.done ? "☑" : "☐"%>  <%= link_to task.name, task_path(task.id) %></h2>
+<% end %>
+
+<%= link_to "create", tasks_new_path %>
+
